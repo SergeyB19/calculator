@@ -3,6 +3,8 @@ package pro.sky.calculator.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import static pro.sky.calculator.calculatorService.*;
+
 @RestController
 public class FirstController {
     @GetMapping
@@ -12,21 +14,21 @@ public class FirstController {
 
     @GetMapping(path = "/calculator/plus?num1=5&num2=5")
     public String plus() {
-        return "5 + 5 = 10";
+        return plus1();
     }
 
     @GetMapping(path = "/calculator/minus?num1=5&num2=5 ")
     public String minus() {
-        return "5 − 5 = 0";
+        return minus1();
     }
 
     @GetMapping(path = "/calculator/multiply?num1=5&num2=5")
     public String multiply() {
-        return "5 * 5 = 25";
+        return multiply1();
     }
 
     @GetMapping(path = "/calculator/divide?num1=5&num2=5")
     public String divide() {
-        return "5 / 5 = 1";
+        return divide1();
     }
 }
