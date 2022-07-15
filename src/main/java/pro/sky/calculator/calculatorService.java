@@ -1,5 +1,13 @@
 package pro.sky.calculator;
 
 public interface calculatorService {
-    String Hello();
+    String hello();
+
+    String plus();
+
+    String minus();
+
+    String multiply();
+
+    String divide();
 }
